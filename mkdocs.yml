@@ -1,0 +1,12 @@
+site_name: Goldboot Documentation
+theme: readthedocs
+markdown_extensions:
+  - admonition
+nav:
+  - Home: index.md
+  - Profiles:
+    - Arch Linux: profiles/arch_linux.md
+    - Pop_OS!: profiles/pop_os.md
+    - Windows 10: profiles/windows_10.md
+  - Tutorials:
+    - Steam Deck Dual-Boot: tutorials/steam_deck_dual_boot.md

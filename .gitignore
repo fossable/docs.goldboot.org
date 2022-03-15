@@ -1,0 +1,6 @@
+.DS_Store
+.gradle
+site
+build
+*.html
+node_modules

@@ -10,8 +10,8 @@ This process will necessarily erase all data on the device's SSD!
 ```sh
 mkdir MySteamDeck && cd MySteamDeck
 goldboot init \
-	--profile SteamDeck \
-	--profile Windows10 \
+	--template SteamDeck \
+	--template Windows10 \
 	--memory 16G \
 	--disk 512G
 ```
@@ -26,18 +26,19 @@ The config will looks something like the following:
 ```json
 {
   "name": "MySteamDeck",
-  "qemu": {
-    "bios": "/usr/share/ovmf/x64/OVMF.fd"
-  },
   "arch": "x86_64",
   "memory": "16G",
   "disk_size": "512G",
-  "SteamDeck": {
-  	"disk_usage": "50%",
-  },
-  "Windows10": {
-  	"disk_usage": "50%",
-  }
+  "templates": [
+    {
+      "type": "SteamDeck",
+      "disk_usage": "50%"
+    },
+    {
+      "type": "Windows10",
+      "disk_usage": "50%"
+    }
+  ],
 }
 ```
 
